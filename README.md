@@ -114,6 +114,8 @@ We recommend installing [Postman](https://www.postman.com/downloads/) for an eas
 
     `position` indicates your current position in the leaderboard.
 
+<img src="./_static/postman2.png">
+
 6. Navigate to the score admin: [http://localhost:8000/admin/score/score/](http://localhost:8000/admin/score/score/).
 
     You should see your highscore has been submitted.
