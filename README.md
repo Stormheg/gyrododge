@@ -87,7 +87,7 @@ We recommend installing [Postman](https://www.postman.com/downloads/) for an eas
 
 1. Start Postman. Open the import wizard via the menu `File / Import...` option and choose the `GyroDodge.postman_collection.json` file included in this repository.
 
-    In the right sidebar you should now see a GyroDodge folder with at least one item in it.
+    In the left sidebar you should now see a GyroDodge folder with at least one item in it.
 
 2. Open the 'Post new highscore' item by clicking it. Notice that it is a HTTP POST request to `http://localhost:8000/api/v1/score/new/`
 
