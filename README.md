@@ -12,7 +12,7 @@ This repository contains the source code for the GyroDodge score system.
 ### Create your virtualenv
 
 Inside the project root, create a new virtualenv. A virtualenv is an isolated installation of Python.
-This ensures that you can have multiple Python project without worrying about different project colliding with each other.
+This ensures that you can have multiple Python projects without worrying about different projects colliding with each other.
 
 ```sh
 python3 -m venv venv
