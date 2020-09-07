@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "9467feeb-ae24-462f-9506-51dcabac65b8",
+		"name": "GyroDodge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post new highscore",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"points\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/score/new/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"score",
+						"new",
+						""
+					]
+				},
+				"description": "Post your highscore and receive your current position in the tournament"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
