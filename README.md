@@ -47,7 +47,7 @@ Sqlite will store its database in a file called `db.sqlite3`.
 Run migrations to create and populate the database:
 
 ```sh
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 ### Create your user account
@@ -55,7 +55,7 @@ python3 manage.py migrate
 You are almost there. Create your user account and follow the prompts.
 
 ```sh
-python3 manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 ### Start the server
@@ -65,7 +65,7 @@ Django comes with a webserver for development purposes. Because our GyroDodge ga
 This webserver should not be used to serve the applications on a real production server!
 
 ```sh
-python3 manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
 ```
 
 `0.0.0.0:8000` means 'listen for connections from other computers on the network on port 8000'. Every computer in your network can now talk to the Django development server. This is a security risk so you should only run the above command on a trusted network like your home network.
