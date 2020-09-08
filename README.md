@@ -60,13 +60,15 @@ python3 manage.py createsuperuser
 
 ### Start the server
 
-Django comes with a webserver for development purposes.
+Django comes with a webserver for development purposes. Because our GyroDodge game is not running on the same machine as this score backend we must tell the Django development server to accept connections from our Raspberry Pi.
 
 This webserver should not be used to serve the applications on a real production server!
 
 ```sh
-python3 manage.py runserver
+python3 manage.py runserver 0.0.0.0:8000
 ```
+
+`0.0.0.0:8000` means 'listen for connections from other computers on the network on port 8000'. Every computer in your network can now talk to the Django development server. This is a security risk so you should only run the above command on a trusted network like your home network.
 
 ### Navigating the admin
 
