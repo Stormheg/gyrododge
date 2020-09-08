@@ -29,7 +29,7 @@ Windows:
 macOS / Linux:
 
 ```sh
-./venv/bin/activate
+source venv/bin/activate
 ```
 
 ### Install project dependencies with pip
