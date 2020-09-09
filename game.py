@@ -20,6 +20,7 @@ pixel_x = 4
 white = (255, 255, 255)
 red = (255, 0, 0)
 
+
 sense.clear()
 
 # Initialise three obstacles on random positions. Obstacles are reused.
@@ -64,6 +65,9 @@ def detect_collisions():
         if obstacle[0] == pixel_x and obstacle[1] <= 0:
             print("collision!")
             submit_score()
+            sense.set_rotation(180)
+            sense.show_message('game over')
+            sense.set_rotation(0)
  
 def move_obstacles():
     """Moves all obstacles to their next position."""
