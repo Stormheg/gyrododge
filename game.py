@@ -49,8 +49,20 @@ def move_right():
     pixel_x -= 1
 
 def submit_score():
+    
+    sense.set_rotation(180)
+    sense.show_message('ENTER NAME')
+    sense.set_rotation(0)
+    sense.clear()
+    name = ""
+    name = input("Enter your name (max 3 letters):")
+    while name == "" or len(name) > 3:
+        print("That name is too long!")
+        name = input("Enter your name (max 3 letters):")
+    
     payload = {
-        "points": score
+        "points": score,
+        "name": name.upper(),
     }
     
     try:
@@ -78,11 +90,13 @@ def detect_collisions():
 
     for obstacle in obstacles:
         if obstacle[0] == pixel_x and obstacle[1] <= 0:
+#             sense.show_message('GAME OVER')
+#             sense.show_message('SCORE')
+#             sense.show_message(str(score))
+
             position = submit_score()
             sense.set_rotation(180)
-            sense.show_message('GAME OVER')
-            sense.show_message('SCORE')
-            sense.show_message(str(score))
+           
             
             if position:
                 sense.show_message('POS')
