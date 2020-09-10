@@ -162,8 +162,9 @@ while True:
     draw_pixel()
     frame += 1
 
-    # Only move obstacles if even frame
-    if frame % 2 == 0:
+    # Only move obstacles if even frame.
+    # Or always when the score is higher than 15
+    if frame % 2 == 0 or score > 15:
         move_obstacles()
         detect_collisions()
         # Reset frame counter
