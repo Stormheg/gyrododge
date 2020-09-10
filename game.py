@@ -57,7 +57,8 @@ def submit_score():
     name = ""
     name = input("Enter your name (max 3 letters):")
     while name == "" or len(name) > 3:
-        print("That name is too long!")
+        if name != "":
+            print("That name is too long!")
         name = input("Enter your name (max 3 letters):")
     
     payload = {
@@ -97,6 +98,7 @@ def detect_collisions():
 
             position = submit_score()           
             
+            sense.set_rotation(180)
             if position:
                 sense.show_message('POS')
                 sense.show_message(str(position))
