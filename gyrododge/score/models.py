@@ -5,6 +5,7 @@ class Score(models.Model):
     """Score model"""
 
     points = models.PositiveIntegerField()
+    name = models.CharField(max_length=3)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def get_position(self) -> int:

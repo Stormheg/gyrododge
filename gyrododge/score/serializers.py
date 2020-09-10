@@ -8,7 +8,7 @@ class ScoreSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Score
-        fields = ["points",]
+        fields = ["points", "name"]
 
 
 class PositionSerializer(serializers.Serializer):
