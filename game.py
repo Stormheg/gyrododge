@@ -53,26 +53,45 @@ def submit_score():
         "points": score
     }
     
-    res = requests.post(API_ENDPOINT, json=payload)
+    try:
+        res = requests.post(API_ENDPOINT, json=payload)
+    except:
+        return None
     print("Status:", res.status_code)
     print("Response:", res.text)
     return res.json()["position"]
     
+def reset_game():
+    global score
+    global obstacles
+    global pixel_x
+    score = 0
+    obstacles = [
+        [random.randint(0, 7), 8],
+        [random.randint(0, 7), 10],
+        [random.randint(0, 7), 14],
+    ]
+    pixel_x = 4
 
 def detect_collisions():
     """Used to detect collisions with obstacles."""
 
     for obstacle in obstacles:
         if obstacle[0] == pixel_x and obstacle[1] <= 0:
-            print("collision!")
             position = submit_score()
             sense.set_rotation(180)
             sense.show_message('GAME OVER')
             sense.show_message('SCORE')
             sense.show_message(str(score))
-            sense.show_message('POSITION')
-            sense.show_message(str(position))
+            
+            if position:
+                sense.show_message('POS')
+                sense.show_message(str(position))
+            else:
+                sense.show_message('NO INTERNET!')
             sense.set_rotation(0)
+            
+            reset_game()
  
 def move_obstacles():
     """Moves all obstacles to their next position."""
