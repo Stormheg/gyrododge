@@ -90,9 +90,9 @@ def detect_collisions():
 
     for obstacle in obstacles:
         if obstacle[0] == pixel_x and obstacle[1] <= 0:
-#             sense.show_message('GAME OVER')
-#             sense.show_message('SCORE')
-#             sense.show_message(str(score))
+            sense.show_message('GAME OVER')
+            sense.show_message('SCORE')
+            sense.show_message(str(score))
 
             position = submit_score()
             sense.set_rotation(180)
