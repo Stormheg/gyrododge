@@ -35,7 +35,7 @@ obstacle_velocity = [0, 1]
 
 
 def draw_pixel():
-    """Draws the player pixel."""
+    """Draw the player pixel."""
     sense.set_pixel(pixel_x, 0, white)
  
 def move_left():
@@ -49,7 +49,7 @@ def move_right():
     pixel_x -= 1
 
 def submit_score():
-    
+    """Submit the score to the server."""
     sense.set_rotation(180)
     sense.show_message('ENTER NAME')
     sense.set_rotation(0)
@@ -87,7 +87,7 @@ def reset_game():
     pixel_x = 4
 
 def detect_collisions():
-    """Used to detect collisions with obstacles."""
+    """Detect collisions with obstacles and trigger game over."""
 
     for obstacle in obstacles:
         if obstacle[0] == pixel_x and obstacle[1] <= 0:
@@ -109,7 +109,7 @@ def detect_collisions():
             reset_game()
  
 def move_obstacles():
-    """Moves all obstacles to their next position."""
+    """Move all obstacles to their next position."""
 
     # For every obstacle we have
     for obstacle in obstacles:
@@ -129,7 +129,7 @@ def move_obstacles():
         obstacle[1] -= obstacle_velocity[1]
  
 def draw_obstacles():
-    """Draws all obstacles."""
+    """Draw all obstacles."""
     
     # For every obstacle we have
     for obstacle in obstacles:
