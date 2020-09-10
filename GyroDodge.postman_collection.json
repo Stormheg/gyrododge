@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9467feeb-ae24-462f-9506-51dcabac65b8",
+		"_postman_id": "56e2b5ab-ea62-4ec8-b29e-51870c3f6cc7",
 		"name": "GyroDodge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"points\": 10\n}",
+					"raw": "{\n    \"points\": 10,\n    \"name\": \"YOU\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
